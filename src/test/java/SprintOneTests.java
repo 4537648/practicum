@@ -1,8 +1,7 @@
-import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
 import org.junit.Test;
 import org.junit.Before;
-import ru.yandex.praktikum.sprintone.MainPageSamokat;
-import ru.yandex.praktikum.sprintone.SprintOneSteps;
+import ru.yandex.praktikum.pageobjects.MainPageSamokat;
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.Assert.assertEquals;
 
@@ -16,74 +15,58 @@ public class SprintOneTests {
   public void beforeSteps() {
     System.setProperty("selenide.browser", "edge");
     mainPage = open(samokatUrl, MainPageSamokat.class);
+    WebDriverRunner.getWebDriver().manage().window().maximize();
     MainPageSamokat.closeCookieNotification();
-    /*
-    Комментарий ревьюера:
-    Веб-браузер лучше запускать в полноэкранном режиме.
-
-    Комментарий рзаработчика Selenide:
-    Selenide does not maximize browser by default
-    At the beginning it seemed to be a good idea to open browser to the full screen size.
-    It should make tests stable: more elements fit to the screen. Many people still think this way.
-    Actually it makes tests flaky because tests result depends on screen size which is a random
-    uncontrollable variable. Our new recommendation to set browser size explicitly to the minimal
-    size supported by your application.
-    https://selenide.org/2018/10/10/selenide-5.0.0/
-
-    Не рекомендуют так делать.
-    Кроме всего прочего, в интернете не нашле способа это сделать, который сработал бы.
-    Буду рад наводке
-     */
   }
 
   @Test
-  public void checkOrderHappyPassScenarioOne() {
-    SprintOneSteps.checkOrderFlow(1, mainPage);
+  public void checkOrderHappyPassScenarioHeaderButton() {
+    MainPageSamokat.checkOrderFlow(1, mainPage);
   }
 
   @Test
-  public void checkOrderHappyPassScenarioTwo() {
-    SprintOneSteps.checkOrderFlow(2, mainPage);
+  public void checkOrderHappyPassScenarioBodyButton() {
+    MainPageSamokat.checkOrderFlow(2, mainPage);
   }
 
   @Test
   public void checkFAQElement01() {
-    SprintOneSteps.checkElementItems(0, mainPage);
+    MainPageSamokat.checkElementItems(0, mainPage);
   }
 
   @Test
   public void checkFAQElement02() {
-    SprintOneSteps.checkElementItems(1, mainPage);
+    MainPageSamokat.checkElementItems(1, mainPage);
   }
 
   @Test
   public void checkFAQElement03() {
-    SprintOneSteps.checkElementItems(2, mainPage);
+    MainPageSamokat.checkElementItems(2, mainPage);
   }
 
   @Test
   public void checkFAQElement04() {
-    SprintOneSteps.checkElementItems(3, mainPage);
+    MainPageSamokat.checkElementItems(3, mainPage);
   }
 
   @Test
   public void checkFAQElement05() {
-    SprintOneSteps.checkElementItems(4, mainPage);
+    MainPageSamokat.checkElementItems(4, mainPage);
   }
 
   @Test
   public void checkFAQElement06() {
-    SprintOneSteps.checkElementItems(5, mainPage);
+    MainPageSamokat.checkElementItems(5, mainPage);
   }
 
   @Test
   public void checkFAQElement07() {
-    SprintOneSteps.checkElementItems(6, mainPage);
+    MainPageSamokat.checkElementItems(6, mainPage);
   }
 
   @Test
   public void checkFAQElement08() {
-    SprintOneSteps.checkElementItems(7, mainPage);
+    MainPageSamokat.checkElementItems(7, mainPage);
   }
 
   @Test
