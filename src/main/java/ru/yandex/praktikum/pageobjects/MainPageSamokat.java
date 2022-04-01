@@ -164,31 +164,31 @@ public class MainPageSamokat {
   // Блок с характеристиками
 
   // Модель Toxic PRO
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[1]/div[1]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'Модель Toxic PRO')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsTitleLineParam;
 
   // Максимальная скорость
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[3]/div[1]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'Максимальная скорость')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsSecondLineParam;
 
   // 40 км/ч
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[3]/div[2]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'40 км/ч')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsSecondLineValue;
 
   // Проедет без подзарядки
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[4]/div[1]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'Проедет без поздарядки')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsThirdLineParam;
 
   // 80 км
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[4]/div[2]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'80 км')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsThirdLineValue;
 
   // Выдерживает вес
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[5]/div[1]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'Выдерживает вес')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsFourthLineParam;
 
   // 120 кг
-  @FindBy(how = How.XPATH, using = "//div[@class='Home_Table__2kPxP']/div[5]/div[2]")
+  @FindBy(how = How.XPATH, using = "//*[contains(text(),'120 кг')][@class='Home_Column__xlKDK']")
   private SelenideElement scooterParamsFourthLineValue;
 
   // Подзаголовок "Как это работает"
